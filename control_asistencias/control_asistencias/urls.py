@@ -20,5 +20,7 @@ from sistema import views
 
 urlpatterns = [
     path('Intraplas_admin/', admin.site.urls),
-    path('dashboard/', views.registro_usuarios, name='dashboard'),
+    path('Usuarios/', views.registro_usuarios, name='Usuarios'),
+    path('usuarios/<int:id>/editar/', views.editar_usuario, name='editar_usuario'),
+    path('usuarios/<int:id>/eliminar/', views.eliminar_usuario, name='eliminar_usuario'),
 ]
