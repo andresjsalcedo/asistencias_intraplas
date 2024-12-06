@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.http import JsonResponse
 from .models import Usuario
 
+
 # Create your views here.
 
 
