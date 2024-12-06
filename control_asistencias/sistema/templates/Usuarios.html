@@ -153,6 +153,7 @@
                                 <!-- Botones de acción -->
                                 <button class="btn btn-sm btn-warning editarUsuario" data-id="{{ usuario.id }}"
                                     data-bs-toggle="modal" data-bs-target="#editModal">Editar</button>
+                                {% csrf_token %}
                                 <button class="btn btn-sm btn-danger eliminarUsuario"
                                     data-id="{{ usuario.id }}">Eliminar</button>
                             </td>

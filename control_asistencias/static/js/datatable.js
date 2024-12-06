@@ -42,7 +42,7 @@ $(document).ready(function () {
                 url: `/usuarios/${userId}/eliminar/`,
                 method: 'POST',
                 data: {
-                    csrfmiddlewaretoken: '{{ csrf_token }}'
+                    'csrfmiddlewaretoken': $('input[name=csrfmiddlewaretoken]').val(),
                 },
                 success: function () {
                     location.reload(); // Recarga la página

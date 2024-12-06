@@ -47,8 +47,13 @@ def editar_usuario(request, id):
     
 
 
+
+
 def eliminar_usuario(request, id):
     usuario = get_object_or_404(Usuario, id=id)
-    usuario.delete()
-    return JsonResponse({'success': True})
+    if request.method == 'POST':
+        usuario.delete()
+        return JsonResponse({'success': True})
+
+    
 
