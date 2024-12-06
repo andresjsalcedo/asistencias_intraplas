@@ -4,6 +4,12 @@ from django.http import JsonResponse
 from .models import Usuario
 
 # Create your views here.
+
+
+def dashboard(request):
+    return render(request, 'dashboard.html')
+
+
 def registro_usuarios(request):
     if request.method == "POST":
         usuario = request.POST['username']
@@ -57,3 +63,5 @@ def eliminar_usuario(request, id):
 
     
 
+def asistencias(request):
+    return render(request, 'Asistencias.html')
