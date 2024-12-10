@@ -34,15 +34,15 @@ $(document).ready(function () {
         });
     });
 
-    // Manejar la eliminación de usuarios
-    $('.eliminarUsuario').click(function () {
+    // Manejar la deshabilitación de usuarios
+    $('.deshabilitarUsuario').click(function () {
         const userId = $(this).data('id');
-        if (confirm('¿Estás seguro de que deseas eliminar este usuario?')) {
+            if (confirm('¿Estás seguro de que deseas deshabilitar este usuario?')) {
             $.ajax({
-                url: `/usuarios/${userId}/eliminar/`,
+                url: `/usuarios/${userId}/deshabilitar/`,  // Cambié el endpoint a deshabilitar
                 method: 'POST',
                 data: {
-                    'csrfmiddlewaretoken': $('input[name=csrfmiddlewaretoken]').val(),  
+                    csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(), 
                 },
                 success: function () {
                     location.reload(); // Recarga la página
@@ -51,3 +51,4 @@ $(document).ready(function () {
         }
     });
 });
+

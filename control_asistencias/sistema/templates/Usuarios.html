@@ -147,11 +147,11 @@
                             <td>{{ usuario.area }}</td>
                             <td>
                                 <!-- Botones de acción -->
-                                <button class="btn btn-sm btn-warning editarUsuario" data-id="{{ usuario.id }}"
+                                <button class="btn btn-sm btn-primary editarUsuario" data-id="{{ usuario.id }}"
                                     data-bs-toggle="modal" data-bs-target="#editModal">Editar</button>
                                 {% csrf_token %}
-                                <button class="btn btn-sm btn-danger eliminarUsuario"
-                                    data-id="{{ usuario.id }}">Eliminar</button>
+                                <button class="btn btn-sm btn-warning deshabilitarUsuario"
+                                    data-id="{{ usuario.id }}">deshabilitar</button>
                             </td>
                         </tr>
                         {% endfor %}

@@ -55,12 +55,13 @@ def editar_usuario(request, id):
 
 
 
-
-def eliminar_usuario(request, id):
+def deshabilitar_usuario(request, id):
     usuario = get_object_or_404(Usuario, id=id)
     if request.method == 'POST':
-        usuario.delete()
+        usuario.activo = False  # Establece el campo activo a False para deshabilitarlo
+        usuario.save()  # Guarda los cambios en la base de datos
         return JsonResponse({'success': True})
+
 
     
 
